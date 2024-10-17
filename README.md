@@ -1,14 +1,17 @@
-# Exercism Python Exercises
+# Exercism Exercises
 
-This repository contains my solutions to Python exercises from [Exercism](https://exercism.org/). Exercism is a platform that provides coding exercises in various programming languages, allowing learners to improve their skills through practice and feedback.
+This repository contains my solutions to exercises from [Exercism](https://exercism.org/). 
+Exercism is a platform that provides coding exercises in various programming languages, 
+allowing learners to improve their skills through practice and feedback.
 
 ## System Requirements
 
-These instructions are specifically for **Debian 12 Linux**. Adjust commands accordingly if you're using another system.
+These instructions are specifically for **Debian 12 Linux**. 
+Adjust commands accordingly if you're using another system.
 
 ## Getting Started
 
-1. **Install the Exercism CLI** following the [installation guide](https://exercism.org/docs/using/solving-exercises/working-locally).
+1. **Install the Exercism CLI** following the [installation guide](https://exercism.org/docs/using/solving-exercises/working-locally).  
    On Debian 12, you can download the CLI and install it by running:
     ```bash
     curl -O https://exercism.org/install
@@ -39,17 +42,43 @@ These instructions are specifically for **Debian 12 Linux**. Adjust commands acc
     pytest
     ```
 
-## Exercises Completed
+## Progress Overview
 
-- [Hello World](https://exercism.org/tracks/python/exercises/hello-world)
+### Python Track
+- Total exercises: 140
+- Completed: 1/140
 
-[//]: # (- [Guido's Gorgeous Lasagna]&#40;https://exercism.org/tracks/python/exercises/guidos-gorgeous-lasagna&#41;)
+  [X] [  ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ]  
+  [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ]  
+  [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ]  
+  [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ]  
+  [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ]  
+  [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ]  
+  [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ]  
+  [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ]  
+  [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ]  
+  [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ]  
+  [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ]  
+  [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ]
 
-More exercises will be added as I progress through the Python track.
+### C++ Track
+- Total exercises: 95
+- Completed: 1/95
+
+  [X] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ]  
+  [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ]  
+  [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ]  
+  [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ]  
+  [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ]  
+  [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ]  
+  [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ]  
+  [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ]  
+  [ ] [ ] [ ] [ ] [ ] [ ]
+
 
 ## Notes
 
-- The exercises are written in Python.
+- The exercises are written in Python and C++.
 - Each exercise directory contains the original problem statement and my solution.
 
 ## How to Contribute
