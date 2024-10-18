@@ -48,7 +48,7 @@ Adjust commands accordingly if you're using another system.
 - Total exercises: 140
 - Completed: 1/140
 
-  [X] [  ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ]  
+  [X] [X] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ]  
   [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ]  
   [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ]  
   [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ]  
