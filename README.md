@@ -46,9 +46,9 @@ Adjust commands accordingly if you're using another system.
 
 ### Python Track
 - Total exercises: 140
-- Completed: 2/140
+- Completed: 3/140
 
-  [X] [X] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ]  
+  [X] [X] [X] [ ] [ ] [ ] [ ] [ ] [ ] [ ]  
   [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ]  
   [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ]  
   [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ]  
