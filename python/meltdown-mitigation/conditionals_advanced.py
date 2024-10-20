@@ -69,9 +69,35 @@ class ReactorEfficiencyZones:
                 return band.output
         return self.black.output
 
+@dataclass
+class ReactorStatusMapping:
+    """Data class to store the different reactor status values."""
+    low: str = 'LOW'
+    normal: str = 'NORMAL'
+    danger: str = 'DANGER'
+
+@dataclass
+class ReactorStatus:
+    """Data class to hold the status thresholds and logic to assess reactor status."""
+    low_threshold_pct: float = 0.9    # 90% of the threshold
+    normal_threshold_pct: float = 1.0 # +/- 10% of the threshold
+    high_threshold_pct: float = 1.1   # 110% of the threshold
+    status_mapping: ReactorStatusMapping = ReactorStatusMapping()
+
+    def assess_status(self, product: Union[int, float], threshold: Union[int, float]) -> str:
+        """Assess reactor status based on the product of temperature and neutrons per second."""
+        if product < threshold * self.low_threshold_pct:
+            return self.status_mapping.low
+        elif threshold * self.low_threshold_pct <= product <= threshold * self.high_threshold_pct:
+            return self.status_mapping.normal
+        else:
+            return self.status_mapping.danger
+
+
 # Instantiate the data classes with default values
 CRITICALITY_BALANCE_CONDITIONS = CriticalityBalanceConditions()
 EFFICIENCY_ZONES = ReactorEfficiencyZones()
+REACTOR_STATUS = ReactorStatus()
 
 def is_criticality_balanced(temperature: Union[int, float], neutrons_emitted: Union[int, float]) -> bool:
     # TODO: add exceptions
@@ -83,10 +109,6 @@ def is_criticality_balanced(temperature: Union[int, float], neutrons_emitted: Un
         neutrons_emitted (int or float) - number of neutrons emitted per second.
     Returns:
         bool - is criticality balanced?
-
-    Example:
-        >>> is_criticality_balanced(750, 600)
-        True
     """
     return (
             temperature < CRITICALITY_BALANCE_CONDITIONS.critical_temperature_limit and
@@ -104,39 +126,28 @@ def reactor_efficiency(voltage: Union[int, float], current: Union[int, float], t
         current: (int or float) - current value.
         theoretical_max_power (int or float) - power that corresponds to a 100% efficiency.
     Returns:
-        str - one of ('green', 'orange', 'red', or 'black').
-
-    Efficiency can be grouped into 4 bands:
-
-    1. green -> efficiency of 80% or more,
-    2. orange -> efficiency of less than 80% but at least 60%,
-    3. red -> efficiency below 60%, but still 30% or more,
-    4. black ->  less than 30% efficient.
-
-    The percentage value is calculated as
-    (generated power/ theoretical max power)*100
-    where generated power = voltage * current
-
-    Example:
-        >>> reactor_efficiency(200, 50, 15000)
-        'orange'
+        str - reactor efficiency zone ('green', 'orange', 'red', or 'black').
     """
     generated_power = voltage * current
     efficiency_pct = (generated_power / theoretical_max_power) * 100
     return EFFICIENCY_ZONES.get_efficiency_zone(efficiency_pct)
 
 
-def fail_safe(temperature, neutrons_produced_per_second, threshold):
-    """Assess and return status code for the reactor.
+def fail_safe(temperature: Union[int, float], neutrons_produced_per_second: Union[int, float], threshold: Union[int, float]) -> str:
+    #TODO: add exceptions
+    """
+    Assess and return status code for the reactor.
 
-    :param temperature: int or float - value of the temperature in kelvin.
-    :param neutrons_produced_per_second: int or float - neutron flux.
-    :param threshold: int or float - threshold for category.
-    :return: str - one of ('LOW', 'NORMAL', 'DANGER').
-
-    1. 'LOW' -> `temperature * neutrons per second` < 90% of `threshold`
-    2. 'NORMAL' -> `temperature * neutrons per second` +/- 10% of `threshold`
-    3. 'DANGER' -> `temperature * neutrons per second` is not in the above-stated ranges
+    Params:
+        temperature (int or float) - value of the temperature in kelvin.
+        neutrons_produced_per_second (int or float) - neutron flux.
+        threshold (int or float) - threshold for category.
+    Returns:
+        str - fail-safe status code.
     """
 
-    pass
+    # Calculate the product of temperature and neutrons emitted
+    product = temperature * neutrons_produced_per_second
+
+    # Use ReactorStatus to assess the status based on the threshold
+    return REACTOR_STATUS.assess_status(product, threshold)
