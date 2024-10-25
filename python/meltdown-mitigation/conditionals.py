@@ -77,7 +77,6 @@ EFFICIENCY_ZONES = ReactorEfficiencyZones()
 REACTOR_STATUS = ReactorStatus()
 
 def is_criticality_balanced(temperature: Union[int, float], neutrons_emitted: Union[int, float]) -> bool:
-    # TODO: exception handling for invalid inputs
     """
     Checks if reactor is balanced.
     """
@@ -88,7 +87,6 @@ def is_criticality_balanced(temperature: Union[int, float], neutrons_emitted: Un
     )
 
 def reactor_efficiency(voltage: Union[int, float], current: Union[int, float], theoretical_max_power: Union[int, float]) -> str:
-    # TODO: exception handling for invalid inputs
     """
     Assess reactor efficiency zone.
     """
@@ -98,7 +96,6 @@ def reactor_efficiency(voltage: Union[int, float], current: Union[int, float], t
 
 
 def fail_safe(temperature: Union[int, float], neutrons_produced_per_second: Union[int, float], threshold: Union[int, float]) -> str:
-    # TODO: exception handling for invalid inputs
     """
     Assess and return status code for the reactor.
     """
