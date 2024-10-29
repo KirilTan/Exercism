@@ -12,4 +12,6 @@ add_executable(cpp
     hello-world/test/tests-main.cpp
     hello-world/hello_world.cpp
     hello-world/hello_world.h
-    hello-world/hello_world_test.cpp)
+    hello-world/hello_world_test.cpp
+        lasagna/lasagna.cpp
+        lasagna/lasagna_test.cpp)
