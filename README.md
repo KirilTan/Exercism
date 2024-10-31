@@ -63,9 +63,9 @@ Adjust commands accordingly if you're using another system.
 
 ### C++ Track
 - Total exercises: 95
-- Completed: 1/95
+- Completed: 2/95
 
-  [X] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ]  
+  [X] [X] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ]  
   [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ]  
   [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ]  
   [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ]  
