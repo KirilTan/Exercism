@@ -81,7 +81,7 @@ def can_split_pairs(card_one, card_two):
     :return: bool - can the hand be split into two pairs? (i.e. cards are of the same value).
     """
 
-    return True if 'A' not in (card_one, card_two) and value_of_card(card_one) == value_of_card(card_two) else False
+    return True if value_of_card(card_one) == value_of_card(card_two) else False
 
 
 def can_double_down(card_one, card_two):
