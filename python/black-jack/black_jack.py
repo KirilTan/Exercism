@@ -3,6 +3,8 @@
 How to play blackjack:    https://bicyclecards.com/how-to-play/blackjack/
 "Standard" playing cards: https://en.wikipedia.org/wiki/Standard_52-card_deck
 """
+from typing import List, Tuple
+
 
 def value_of_card(card: str) -> int | str:
     """Determine the scoring value of a card.
@@ -23,7 +25,7 @@ def value_of_card(card: str) -> int | str:
 
     return 'Invalid input'
 
-def higher_card(card_one, card_two):
+def higher_card(card_one: str, card_two: str) -> str | Tuple[str, str]:
     """Determine which card has a higher value in the hand.
 
     :param card_one, card_two: str - cards dealt in hand.  See below for values.
@@ -33,8 +35,11 @@ def higher_card(card_one, card_two):
     2.  'A' (ace card) = 1
     3.  '2' - '10' = numerical value.
     """
+    card_one_value = value_of_card(card_one)
+    card_two_value = value_of_card(card_two)
 
-    pass
+    # Return both cards if they have the same value, otherwise return the card with the bigger value
+    return (card_one, card_two) if card_one_value == card_two_value else (card_one if value_of_card(card_one) > value_of_card(card_two) else card_two)
 
 
 def value_of_ace(card_one, card_two):
