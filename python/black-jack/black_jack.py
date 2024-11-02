@@ -90,8 +90,4 @@ def can_double_down(card_one, card_two):
     :param card_one, card_two: str - first and second cards in hand.
     :return: bool - can the hand can be doubled down? (i.e. totals 9, 10 or 11 points).
     """
-    return True if value_of_card(card_one) + value_of_card(card_two) in range(9, 11) else False
-
-print(can_double_down('A', '9'))
-print(can_double_down('10', '2'))
-
+    return True if value_of_card(card_one) + value_of_card(card_two) in range(9, 12) else False
