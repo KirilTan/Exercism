@@ -20,7 +20,7 @@ def value_of_card(card: str) -> int | str:
         return 10
     if card == 'A':
         return 1
-    if card.isnumeric() and card not in range(2, 10):
+    if card.isnumeric() and int(card) in range(2, 11):
         return int(card)
 
     return 'Invalid input'
