@@ -4,8 +4,7 @@ How to play blackjack:    https://bicyclecards.com/how-to-play/blackjack/
 "Standard" playing cards: https://en.wikipedia.org/wiki/Standard_52-card_deck
 """
 
-
-def value_of_card(card):
+def value_of_card(card: str) -> int | str:
     """Determine the scoring value of a card.
 
     :param card: str - given card.
@@ -15,9 +14,14 @@ def value_of_card(card):
     2.  'A' (ace card) = 1
     3.  '2' - '10' = numerical value.
     """
+    if card in ['J', 'Q', 'K']:
+        return 10
+    if card == 'A':
+        return 1
+    if card.isnumeric() and card not in range(2-10):
+        return int(card)
 
-    pass
-
+    return 'Invalid input'
 
 def higher_card(card_one, card_two):
     """Determine which card has a higher value in the hand.
