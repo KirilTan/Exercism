@@ -56,7 +56,7 @@ def remove_suffix_ness(word: str) -> str:
     return new_string[:-1] + 'y' if new_string.endswith('i') else new_string
 
 
-def adjective_to_verb(sentence, index):
+def adjective_to_verb(sentence: str, index: int) -> str:
     """Change the adjective within the sentence to a verb.
 
     :param sentence: str - that uses the word in sentence.
