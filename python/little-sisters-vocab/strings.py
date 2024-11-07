@@ -28,12 +28,15 @@ def make_word_groups(vocab_words: List[str]) -> str:
     For example: list('en', 'close', 'joy', 'lighten'),
     produces the following string: 'en :: enclose :: enjoy :: enlighten'.
     """
-    prefix = vocab_words[0]
-    return_string = [prefix]
-    for word in vocab_words[1:]:
-        return_string.append(prefix + word)
+    # prefix = vocab_words[0]
+    # return_string = [prefix]
+    # for word in vocab_words[1:]:
+    #     return_string.append(prefix + word)
+    #
+    # return ' :: '.join(return_string)
 
-    return ' :: '.join(return_string)
+    prefix = vocab_words[0]
+    return ' :: '.join([prefix] + [prefix + word for word in vocab_words[1:]])
 
 print(make_word_groups(['en', 'circle', 'fold', 'close', 'joy', 'lighten', 'tangle', 'able', 'code', 'culture']))
 
