@@ -13,7 +13,6 @@ def add_prefix_un(word: str, prefix: str = 'un') -> str:
     return prefix + word
 
 
-
 def make_word_groups(vocab_words: List[str]) -> str:
     """Transform a list containing a prefix and words into a string with the prefix followed by the words with prefix prepended.
 
@@ -37,8 +36,6 @@ def make_word_groups(vocab_words: List[str]) -> str:
 
     prefix = vocab_words[0]
     return ' :: '.join([prefix] + [prefix + word for word in vocab_words[1:]])
-
-print(make_word_groups(['en', 'circle', 'fold', 'close', 'joy', 'lighten', 'tangle', 'able', 'code', 'culture']))
 
 
 def remove_suffix_ness(word):
