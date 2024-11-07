@@ -38,7 +38,7 @@ def make_word_groups(vocab_words: List[str]) -> str:
     return ' :: '.join([prefix] + [prefix + word for word in vocab_words[1:]])
 
 
-def remove_suffix_ness(word):
+def remove_suffix_ness(word: str) -> str:
     """Remove the suffix from the word while keeping spelling in mind.
 
     :param word: str - of word to remove suffix from.
