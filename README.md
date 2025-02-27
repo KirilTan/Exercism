@@ -46,10 +46,10 @@ Adjust commands accordingly if you're using another system.
 
 ### Python Track
 - Total exercises: 140
-- Completed: 13/140
+- Completed: 15/140
 
   [X] [X] [X] [X] [X] [X] [X] [X] [X] [X]  
-  [X] [X] [X] [ ] [ ] [ ] [ ] [ ] [ ] [ ]  
+  [X] [X] [X] [X] [X] [ ] [ ] [ ] [ ] [ ]  
   [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ]  
   [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ]  
   [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ]  
